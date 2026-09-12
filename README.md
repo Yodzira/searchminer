@@ -44,7 +44,7 @@ EN: download the zip from Releases → WP admin → Plugins → Add New → Uplo
 
 ## Требования / Requirements
 
-- WordPress 5.2+ (протестировано до 7.1), PHP 7.2+
+- WordPress 6.0+ (протестировано до 7.1), PHP 7.4+
 - Работает с WooCommerce (учитывает продуктовые поиски) и плагинами кэширования
 
 ## Качество / Quality
