@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SearchMiner — что ищут на вашем сайте (и чего не находят)</title>
+<meta name="description" content="Плагин WordPress: аналитика поисковых запросов посетителей. Нулевые запросы, выручка под риском, недельные дайджесты. Бесплатная версия + Pro.">
+<meta property="og:title" content="SearchMiner — search analytics for WordPress">
+<meta property="og:description" content="See what visitors search for on your site — and what they can't find.">
+<style>
+  :root{--bg:#0d1117;--panel:#161d27;--line:#232b36;--text:#f0f2f5;--muted:#8b949e;
+        --accent:#e53935;--green:#3fb950;--yellow:#d4a72c;--blue:#58a6ff}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  header{border-bottom:1px solid var(--line);padding:14px 0}
+  header .wrap{display:flex;align-items:center;gap:12px}
+  .logo{width:34px;height:34px;border-radius:8px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff}
+  .brand{font-weight:800;font-size:20px}
+  .lang{margin-left:auto;display:flex;gap:8px}
+  .lang button{background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:6px 12px;cursor:pointer;font-size:14px}
+  .lang button.on{border-color:var(--accent);color:var(--text)}
+  .hero{padding:64px 0 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}
+  h1{font-size:40px;line-height:1.15;margin-bottom:16px}
+  h1 .red{color:var(--accent)}
+  .sub{color:var(--muted);font-size:19px;margin-bottom:28px}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 24px;border-radius:10px;font-weight:700;text-decoration:none;font-size:17px}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-ghost{border:2px solid var(--green);color:var(--green)}
+  .note{color:var(--muted);font-size:13px;margin-top:12px}
+  .shot{border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,.5)}
+  .shot img{display:block;width:100%}
+  section{padding:44px 0}
+  h2{font-size:30px;margin-bottom:24px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .card b{display:block;margin-bottom:8px;font-size:17px}
+  .card span{color:var(--muted);font-size:15px}
+  table{width:100%;border-collapse:collapse;background:var(--panel);border-radius:12px;overflow:hidden}
+  th,td{padding:14px 18px;border-bottom:1px solid var(--line);text-align:left;font-size:16px}
+  th{background:#1b2330}
+  td.yes{color:var(--green);font-weight:700}
+  td.no{color:var(--muted)}
+  .price{color:var(--green);font-weight:800}
+  .faq div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+  .faq b{display:block;margin-bottom:6px}
+  .faq p{color:var(--muted);font-size:15px}
+  footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:14px}
+  footer a{color:var(--blue);text-decoration:none}
+  .en{display:none}
+  @media(max-width:860px){.hero{grid-template-columns:1fr}.hero{padding-top:36px}h1{font-size:32px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="logo">S</div><div class="brand">SearchMiner</div>
+  <div class="lang"><button id="ruBtn" class="on" onclick="setLang('ru')">RU</button><button id="enBtn" onclick="setLang('en')">EN</button></div>
+</div></header>
+
+<div class="wrap">
+<!-- ============ RU ============ -->
+<div id="ru">
+  <div class="hero">
+    <div>
+      <h1>Узнайте, <span class="red">что ищут</span> на вашем сайте — и чего не находят</h1>
+      <p class="sub">SearchMiner — лёгкий плагин WordPress: записывает каждый поисковый запрос, находит «нулевые» запросы и подсказывает, какой контент или товар добавить.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://lava.top/searchminer">Купить Pro — 2 990 ₽/год</a>
+        <a class="btn btn-ghost" href="https://github.com/Yodzira/searchminer/releases/latest/download/searchminer.zip">Скачать бесплатно</a>
+      </div>
+      <p class="note">WordPress 5.2+ • PHP 7.2+ • без внешних сервисов • не сохраняет IP</p>
+    </div>
+    <div class="shot"><img src="img/screenshot-dashboard.png" alt="Дашборд SearchMiner"></div>
+  </div>
+
+  <section>
+    <h2>Что он делает</h2>
+    <div class="grid">
+      <div class="card"><b>Все поисковые запросы</b><span>Каждый поиск записывается: запрос, количество результатов, кликнули ли по выдаче.</span></div>
+      <div class="card"><b>«Нулевые» запросы</b><span>Видно, что люди ищут и не находят — это готовый план статей и товаров.</span></div>
+      <div class="card"><b>Приватность по умолчанию</b><span>IP не сохраняется, персональных данных нет. Данные остаются в вашей базе.</span></div>
+      <div class="card"><b>Чистое удаление</b><span>Удалили плагин — таблицы и настройки стёрты. Никакого мусора в базе.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Free и Pro</h2>
+    <table>
+      <tr><th></th><th>Free</th><th>Pro</th></tr>
+      <tr><td>Аналитика запросов и «нулевых» запросов</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>Дашборд, топ запросов, динамика по дням</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>WooCommerce: учёт поисков по товарам</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td><b>Выручка под риском</b>: нулевой запрос → существующий товар</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td><b>Недельный дайджест</b> на email</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td><b>Кластеризация опечаток</b> (кириллица и латиница)</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td>Цена</td><td>0 ₽</td><td class="price">2 990 ₽ / год</td></tr>
+    </table>
+    <p class="note" style="margin-top:14px">Pro — компаньон-плагин к бесплатной версии. Одна лицензия на один сайт.</p>
+  </section>
+
+  <section class="faq">
+    <h2>Вопросы</h2>
+    <div><b>Замедлит ли сайт?</b><p>Нет. Запись поиска — один лёгкий запрос к вашей же базе, крон раз в сутки чистит старое. Работает с LiteSpeed Cache, WP Super Cache, Autoptimize.</p></div>
+    <div><b>Куда уходят данные?</b><p>Никуда. SearchMiner не отправляет ничего наружу — вся аналитика живёт в вашей базе данных.</p></div>
+    <div><b>Как установить?</b><p>Скачайте zip → Плагины → Добавить новый → Загрузить плагин → Активировать. Раздел появится в меню админки.</p></div>
+    <div><b>Что с GDPR / 152-ФЗ?</b><p>IP не сохраняется, персональные данные не записываются, экспорта наружу нет.</p></div>
+  </section>
+</div>
+
+<!-- ============ EN ============ -->
+<div id="en" class="en">
+  <div class="hero">
+    <div>
+      <h1>See <span class="red">what visitors search</span> for on your site — and what they can't find</h1>
+      <p class="sub">SearchMiner is a lightweight WordPress plugin: it records every search query, spots zero-result searches, and tells you which content or product to add next.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="https://lava.top/searchminer">Buy Pro — $29/year</a>
+        <a class="btn btn-ghost" href="https://github.com/Yodzira/searchminer/releases/latest/download/searchminer.zip">Download free</a>
+      </div>
+      <p class="note">WordPress 5.2+ • PHP 7.2+ • no external services • no IP storage</p>
+    </div>
+    <div class="shot"><img src="img/screenshot-dashboard.png" alt="SearchMiner dashboard"></div>
+  </div>
+
+  <section>
+    <h2>What it does</h2>
+    <div class="grid">
+      <div class="card"><b>Every search query</b><span>Query, result count, and whether the visitor clicked — all recorded locally.</span></div>
+      <div class="card"><b>Zero-result searches</b><span>See what people want but can't find — a ready-made roadmap for content and products.</span></div>
+      <div class="card"><b>Private by default</b><span>No IP storage, no personal data. Everything stays in your own database.</span></div>
+      <div class="card"><b>Clean uninstall</b><span>Deleting the plugin wipes its tables and options. Zero leftovers.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Free vs Pro</h2>
+    <table>
+      <tr><th></th><th>Free</th><th>Pro</th></tr>
+      <tr><td>Query & zero-result analytics</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>Dashboard, top queries, daily trend</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td>WooCommerce product-search awareness</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+      <tr><td><b>Revenue at risk</b>: zero query → matching product</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td><b>Weekly email digests</b></td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td><b>Typo clustering</b> (multibyte Levenshtein)</td><td class="no">—</td><td class="yes">✓</td></tr>
+      <tr><td>Price</td><td>Free</td><td class="price">$29 / year</td></tr>
+    </table>
+    <p class="note" style="margin-top:14px">Pro is a companion plugin on top of the free version. One license per site.</p>
+  </section>
+
+  <section class="faq">
+    <h2>FAQ</h2>
+    <div><b>Will it slow my site down?</b><p>No. Recording a search is one lightweight insert into your own database; a daily cron prunes old rows. Tested with LiteSpeed Cache, WP Super Cache, Autoptimize.</p></div>
+    <div><b>Where does the data go?</b><p>Nowhere. SearchMiner sends nothing externally — all analytics live in your database.</p></div>
+    <div><b>How do I install it?</b><p>Download the zip → Plugins → Add New → Upload Plugin → Activate. A SearchMiner menu appears in wp-admin.</p></div>
+    <div><b>GDPR?</b><p>No IPs stored, no personal data recorded, nothing exported.</p></div>
+  </section>
+</div>
+
+<footer><div class="wrap">
+  SearchMiner © 2026 · <a href="https://github.com/Yodzira/searchminer">GitHub</a> · GPL-2.0 · Бесплатная версия — свободная лицензия, Pro — годовая лицензия на 1 сайт.
+</div></footer>
+</div>
+
+<script>
+function setLang(l){
+  document.getElementById('ru').style.display = l==='ru'?'block':'none';
+  document.getElementById('en').style.display = l==='en'?'block':'none';
+  document.getElementById('ruBtn').className = l==='ru'?'on':'';
+  document.getElementById('enBtn').className = l==='en'?'on':'';
+}
+</script>
+</body>
+</html>

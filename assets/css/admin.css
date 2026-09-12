@@ -1,0 +1,37 @@
+/* SearchMiner admin */
+
+.wpsm-nav { margin: 8px 0 16px; }
+.wpsm-nav a { margin-right: 14px; text-decoration: none; }
+.wpsm-nav a.wpsm-on { font-weight: 600; text-decoration: underline; }
+
+.wpsm-cards { display: flex; gap: 16px; flex-wrap: wrap; margin: 12px 0 20px; }
+.wpsm-card {
+	background: #fff;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	padding: 14px 20px;
+	min-width: 180px;
+}
+.wpsm-num  { font-size: 28px; font-weight: 600; line-height: 1.2; }
+.wpsm-label{ color: #50575e; margin-top: 4px; }
+
+.wpsm-chart { background: #fff; border: 1px solid #dcdcde; border-radius: 8px; padding: 16px; margin-bottom: 20px; }
+.wpsm-bars { display: flex; align-items: flex-end; justify-content: flex-start; gap: 6px; height: 140px; }
+.wpsm-bar {
+	flex: 0 1 40px;
+	min-width: 8px;
+	position: relative;
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	background: #f0f0f1;
+	border-radius: 3px 3px 0 0;
+	overflow: hidden;
+}
+.wpsm-bar-hit  { width: 100%; background: #3858e9; display: block; border-radius: 3px 3px 0 0; }
+.wpsm-bar-zero { width: 100%; background: #d63638; display: block; position: absolute; bottom: 0; opacity: .9; }
+
+.wpsm-table .wpsm-hot td:first-child { font-weight: 600; }
+
+.wpsm-widget-list { margin-left: 18px; list-style: disc; }
