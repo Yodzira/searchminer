@@ -45,6 +45,13 @@ beacon when they leave without clicking anything. That is all.
 * AJAX search widgets (third-party) are not recorded in this version
 * The plugin counts behaviour; it cannot tell you visitor intent
 
+== Pro Version ==
+
+Pro adds automation, reports and integrations on top of the free version
+(one license = one site, 12 months of updates):
+
+https://yodsira.duckdns.org/buy/searchminer
+
 == Installation ==
 
 1. Install via Plugins → Add New → search for "SearchMiner", or upload the zip.
