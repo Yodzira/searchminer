@@ -3,7 +3,7 @@
  * Plugin Name:       SearchMiner
  * Plugin URI:        https://wordpress.org/plugins/searchminer/
  * Description:       See what visitors search on your site and what your search can't find — without replacing your search engine. WooCommerce ready.
- * Version:           0.1.0
+ * Version:           0.1.1
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            Yodzira
@@ -14,7 +14,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'WPSM_VERSION', '0.1.0' );
+define( 'WPSM_VERSION', '0.1.1' );
 define( 'WPSM_FILE', __FILE__ );
 define( 'WPSM_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WPSM_CAP', 'manage_options' );

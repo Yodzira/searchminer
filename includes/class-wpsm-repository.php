@@ -171,6 +171,32 @@ final class WPSM_Repository {
 	}
 
 	/**
+	 * Whether a recorded query hash exists in the queries table.
+	 *
+	 * Cheap indexed read used by the public beacon before any write.
+	 *
+	 * @param string $hash 32-char hex.
+	 * @return bool
+	 */
+	public static function query_exists( $hash ) {
+		global $wpdb;
+
+		if ( ! preg_match( '/^[0-9a-f]{32}$/', $hash ) ) {
+			return false;
+		}
+		$t = self::queries_table();
+
+		// phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared
+		return (bool) $wpdb->get_var(
+			$wpdb->prepare(
+				// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- table name is internal.
+				"SELECT 1 FROM {$t} WHERE qhash = %s LIMIT 1",
+				$hash
+			)
+		);
+	}
+
+	/**
 	 * Register a click or a no-click beacon for a known query hash.
 	 *
 	 * @param string $hash 32-char hex.

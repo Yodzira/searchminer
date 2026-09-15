@@ -21,7 +21,6 @@ final class WPSM_Settings {
 	 * Bootstrap hooks.
 	 */
 	public static function init() {
-		load_plugin_textdomain( 'searchminer', false, dirname( plugin_basename( WPSM_FILE ) ) . '/languages' );
 	}
 
 	/**

@@ -33,6 +33,15 @@ class RepositoryTest extends WP_UnitTestCase {
 		$this->assertCount( 0, WPSM_Repository::top( 'hits', 30, 10 ) );
 	}
 
+	public function test_query_exists_matches_recorded_hash_only() {
+		WPSM_Repository::record( 'кухонные весы', false, false );
+		$hash = WPSM_Normalizer::key( 'кухонные весы' );
+
+		$this->assertTrue( WPSM_Repository::query_exists( $hash ) );
+		$this->assertFalse( WPSM_Repository::query_exists( str_repeat( 'a', 32 ) ) );
+		$this->assertFalse( WPSM_Repository::query_exists( "'; DROP TABLE wp_wpsm_queries;--" ) );
+	}
+
 	public function test_engagement_on_known_hash_only() {
 		WPSM_Repository::record( 'кухонные весы', false, false );
 		$hash = WPSM_Normalizer::key( 'кухонные весы' );

@@ -40,6 +40,12 @@ final class WPSM_Beacon {
 			self::no_content();
 		}
 
+		// Unknown hash: read-only existence check first, so attacker-supplied
+		// hashes never create transients (options-table bloat) nor touch counters.
+		if ( ! WPSM_Repository::query_exists( $q ) ) {
+			self::no_content();
+		}
+
 		if ( ! self::rate_limit_ok( $q . $a ) ) {
 			self::no_content();
 		}
