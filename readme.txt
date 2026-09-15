@@ -50,7 +50,7 @@ beacon when they leave without clicking anything. That is all.
 Pro adds automation, reports and integrations on top of the free version
 (one license = one site, 12 months of updates):
 
-https://yodsira.duckdns.org/buy/searchminer
+https://yodsira.com/buy/searchminer
 
 == Installation ==
 

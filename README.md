@@ -58,4 +58,4 @@ EN: download the zip from Releases → WP admin → Plugins → Add New → Uplo
 
 GPL-2.0-or-later (совместимо с WordPress).
 
-💰 **[Купить Pro / Buy Pro — 2 990 ₽/год](https://yodsira.duckdns.org/buy/searchminer)** — лицензия на 1 сайт, 12 месяцев обновлений.
+💰 **[Купить Pro / Buy Pro — 2 990 ₽/год](https://yodsira.com/buy/searchminer)** — лицензия на 1 сайт, 12 месяцев обновлений.
